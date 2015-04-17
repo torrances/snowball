@@ -11,47 +11,47 @@ import org.tartarus.snowball.custom.SnowballStemmerBase;
  * It implements the stemming algorithm defined by a snowball script.
  */
 
-@SuppressWarnings("unused") public class EnglishStemmer extends SnowballStemmerBase {
+@SuppressWarnings("unused") public class EnglishStemmer4Use extends SnowballStemmerBase {
 
-	private final static EnglishStemmer	methodObject		= new EnglishStemmer();
+	private final static EnglishStemmer4Use	methodObject		= new EnglishStemmer4Use();
 
-	private final static Among			a_0[]				= { new Among("arsen", -1, -1, "", methodObject), new Among("commun", -1, -1, "", methodObject), new Among("gener", -1, -1, "", methodObject) };
+	private final static Among4Use			a_0[]				= { new Among4Use("arsen", -1, -1, "", methodObject), new Among4Use("commun", -1, -1, "", methodObject), new Among4Use("gener", -1, -1, "", methodObject) };
 
-	private final static Among			a_1[]				= { new Among("'", -1, 1, "", methodObject), new Among("'s'", 0, 1, "", methodObject), new Among("'s", -1, 1, "", methodObject) };
+	private final static Among4Use			a_1[]				= { new Among4Use("'", -1, 1, "", methodObject), new Among4Use("'s'", 0, 1, "", methodObject), new Among4Use("'s", -1, 1, "", methodObject) };
 
-	private final static Among			a_10[]				= { new Among("andes", -1, -1, "", methodObject), new Among("atlas", -1, -1, "", methodObject), new Among("bias", -1, -1, "", methodObject), new Among("cosmos", -1, -1, "", methodObject),
-			new Among("dying", -1, 3, "", methodObject), new Among("early", -1, 9, "", methodObject), new Among("gently", -1, 7, "", methodObject), new Among("howe", -1, -1, "", methodObject), new Among("idly", -1, 6, "", methodObject),
-			new Among("lying", -1, 4, "", methodObject), new Among("news", -1, -1, "", methodObject), new Among("only", -1, 10, "", methodObject), new Among("singly", -1, 11, "", methodObject), new Among("skies", -1, 2, "", methodObject),
-			new Among("skis", -1, 1, "", methodObject), new Among("sky", -1, -1, "", methodObject), new Among("tying", -1, 5, "", methodObject), new Among("ugly", -1, 8, "", methodObject) };
+	private final static Among4Use			a_10[]				= { new Among4Use("andes", -1, -1, "", methodObject), new Among4Use("atlas", -1, -1, "", methodObject), new Among4Use("bias", -1, -1, "", methodObject), new Among4Use("cosmos", -1, -1, "", methodObject),
+			new Among4Use("dying", -1, 3, "", methodObject), new Among4Use("early", -1, 9, "", methodObject), new Among4Use("gently", -1, 7, "", methodObject), new Among4Use("howe", -1, -1, "", methodObject), new Among4Use("idly", -1, 6, "", methodObject),
+			new Among4Use("lying", -1, 4, "", methodObject), new Among4Use("news", -1, -1, "", methodObject), new Among4Use("only", -1, 10, "", methodObject), new Among4Use("singly", -1, 11, "", methodObject), new Among4Use("skies", -1, 2, "", methodObject),
+			new Among4Use("skis", -1, 1, "", methodObject), new Among4Use("sky", -1, -1, "", methodObject), new Among4Use("tying", -1, 5, "", methodObject), new Among4Use("ugly", -1, 8, "", methodObject) };
 
-	private final static Among			a_2[]				= { new Among("ied", -1, 2, "", methodObject), new Among("s", -1, 3, "", methodObject), new Among("ies", 1, 2, "", methodObject), new Among("sses", 1, 1, "", methodObject), new Among("ss", 1, -1, "", methodObject),
-			new Among("us", 1, -1, "", methodObject)		};
+	private final static Among4Use			a_2[]				= { new Among4Use("ied", -1, 2, "", methodObject), new Among4Use("s", -1, 3, "", methodObject), new Among4Use("ies", 1, 2, "", methodObject), new Among4Use("sses", 1, 1, "", methodObject), new Among4Use("ss", 1, -1, "", methodObject),
+			new Among4Use("us", 1, -1, "", methodObject)		};
 
-	private final static Among			a_3[]				= { new Among("", -1, 3, "", methodObject), new Among("bb", 0, 2, "", methodObject), new Among("dd", 0, 2, "", methodObject), new Among("ff", 0, 2, "", methodObject), new Among("gg", 0, 2, "", methodObject),
-			new Among("bl", 0, 1, "", methodObject), new Among("mm", 0, 2, "", methodObject), new Among("nn", 0, 2, "", methodObject), new Among("pp", 0, 2, "", methodObject), new Among("rr", 0, 2, "", methodObject), new Among("at", 0, 1, "", methodObject),
-			new Among("tt", 0, 2, "", methodObject), new Among("iz", 0, 1, "", methodObject) };
+	private final static Among4Use			a_3[]				= { new Among4Use("", -1, 3, "", methodObject), new Among4Use("bb", 0, 2, "", methodObject), new Among4Use("dd", 0, 2, "", methodObject), new Among4Use("ff", 0, 2, "", methodObject), new Among4Use("gg", 0, 2, "", methodObject),
+			new Among4Use("bl", 0, 1, "", methodObject), new Among4Use("mm", 0, 2, "", methodObject), new Among4Use("nn", 0, 2, "", methodObject), new Among4Use("pp", 0, 2, "", methodObject), new Among4Use("rr", 0, 2, "", methodObject), new Among4Use("at", 0, 1, "", methodObject),
+			new Among4Use("tt", 0, 2, "", methodObject), new Among4Use("iz", 0, 1, "", methodObject) };
 
-	private final static Among			a_4[]				= { new Among("ed", -1, 2, "", methodObject), new Among("eed", 0, 1, "", methodObject), new Among("ing", -1, 2, "", methodObject), new Among("edly", -1, 2, "", methodObject), new Among("eedly", 3, 1, "", methodObject),
-			new Among("ingly", -1, 2, "", methodObject)	};
+	private final static Among4Use			a_4[]				= { new Among4Use("ed", -1, 2, "", methodObject), new Among4Use("eed", 0, 1, "", methodObject), new Among4Use("ing", -1, 2, "", methodObject), new Among4Use("edly", -1, 2, "", methodObject), new Among4Use("eedly", 3, 1, "", methodObject),
+			new Among4Use("ingly", -1, 2, "", methodObject)	};
 
-	private final static Among			a_5[]				= { new Among("anci", -1, 3, "", methodObject), new Among("enci", -1, 2, "", methodObject), new Among("ogi", -1, 13, "", methodObject), new Among("li", -1, 16, "", methodObject),
-			new Among("bli", 3, 12, "", methodObject), new Among("abli", 4, 4, "", methodObject), new Among("alli", 3, 8, "", methodObject), new Among("fulli", 3, 14, "", methodObject), new Among("lessli", 3, 15, "", methodObject), new Among("ousli", 3, 10, "", methodObject),
-			new Among("entli", 3, 5, "", methodObject), new Among("aliti", -1, 8, "", methodObject), new Among("biliti", -1, 12, "", methodObject), new Among("iviti", -1, 11, "", methodObject), new Among("tional", -1, 1, "", methodObject),
-			new Among("ational", 14, 7, "", methodObject), new Among("alism", -1, 8, "", methodObject), new Among("ation", -1, 7, "", methodObject), new Among("ization", 17, 6, "", methodObject), new Among("izer", -1, 6, "", methodObject),
-			new Among("ator", -1, 7, "", methodObject), new Among("iveness", -1, 11, "", methodObject), new Among("fulness", -1, 9, "", methodObject), new Among("ousness", -1, 10, "", methodObject) };
+	private final static Among4Use			a_5[]				= { new Among4Use("anci", -1, 3, "", methodObject), new Among4Use("enci", -1, 2, "", methodObject), new Among4Use("ogi", -1, 13, "", methodObject), new Among4Use("li", -1, 16, "", methodObject),
+			new Among4Use("bli", 3, 12, "", methodObject), new Among4Use("abli", 4, 4, "", methodObject), new Among4Use("alli", 3, 8, "", methodObject), new Among4Use("fulli", 3, 14, "", methodObject), new Among4Use("lessli", 3, 15, "", methodObject), new Among4Use("ousli", 3, 10, "", methodObject),
+			new Among4Use("entli", 3, 5, "", methodObject), new Among4Use("aliti", -1, 8, "", methodObject), new Among4Use("biliti", -1, 12, "", methodObject), new Among4Use("iviti", -1, 11, "", methodObject), new Among4Use("tional", -1, 1, "", methodObject),
+			new Among4Use("ational", 14, 7, "", methodObject), new Among4Use("alism", -1, 8, "", methodObject), new Among4Use("ation", -1, 7, "", methodObject), new Among4Use("ization", 17, 6, "", methodObject), new Among4Use("izer", -1, 6, "", methodObject),
+			new Among4Use("ator", -1, 7, "", methodObject), new Among4Use("iveness", -1, 11, "", methodObject), new Among4Use("fulness", -1, 9, "", methodObject), new Among4Use("ousness", -1, 10, "", methodObject) };
 
-	private final static Among			a_6[]				= { new Among("icate", -1, 4, "", methodObject), new Among("ative", -1, 6, "", methodObject), new Among("alize", -1, 3, "", methodObject), new Among("iciti", -1, 4, "", methodObject),
-			new Among("ical", -1, 4, "", methodObject), new Among("tional", -1, 1, "", methodObject), new Among("ational", 5, 2, "", methodObject), new Among("ful", -1, 5, "", methodObject), new Among("ness", -1, 5, "", methodObject) };
+	private final static Among4Use			a_6[]				= { new Among4Use("icate", -1, 4, "", methodObject), new Among4Use("ative", -1, 6, "", methodObject), new Among4Use("alize", -1, 3, "", methodObject), new Among4Use("iciti", -1, 4, "", methodObject),
+			new Among4Use("ical", -1, 4, "", methodObject), new Among4Use("tional", -1, 1, "", methodObject), new Among4Use("ational", 5, 2, "", methodObject), new Among4Use("ful", -1, 5, "", methodObject), new Among4Use("ness", -1, 5, "", methodObject) };
 
-	private final static Among			a_7[]				= { new Among("ic", -1, 1, "", methodObject), new Among("ance", -1, 1, "", methodObject), new Among("ence", -1, 1, "", methodObject), new Among("able", -1, 1, "", methodObject),
-			new Among("ible", -1, 1, "", methodObject), new Among("ate", -1, 1, "", methodObject), new Among("ive", -1, 1, "", methodObject), new Among("ize", -1, 1, "", methodObject), new Among("iti", -1, 1, "", methodObject), new Among("al", -1, 1, "", methodObject),
-			new Among("ism", -1, 1, "", methodObject), new Among("ion", -1, 2, "", methodObject), new Among("er", -1, 1, "", methodObject), new Among("ous", -1, 1, "", methodObject), new Among("ant", -1, 1, "", methodObject), new Among("ent", -1, 1, "", methodObject),
-			new Among("ment", 15, 1, "", methodObject), new Among("ement", 16, 1, "", methodObject) };
+	private final static Among4Use			a_7[]				= { new Among4Use("ic", -1, 1, "", methodObject), new Among4Use("ance", -1, 1, "", methodObject), new Among4Use("ence", -1, 1, "", methodObject), new Among4Use("able", -1, 1, "", methodObject),
+			new Among4Use("ible", -1, 1, "", methodObject), new Among4Use("ate", -1, 1, "", methodObject), new Among4Use("ive", -1, 1, "", methodObject), new Among4Use("ize", -1, 1, "", methodObject), new Among4Use("iti", -1, 1, "", methodObject), new Among4Use("al", -1, 1, "", methodObject),
+			new Among4Use("ism", -1, 1, "", methodObject), new Among4Use("ion", -1, 2, "", methodObject), new Among4Use("er", -1, 1, "", methodObject), new Among4Use("ous", -1, 1, "", methodObject), new Among4Use("ant", -1, 1, "", methodObject), new Among4Use("ent", -1, 1, "", methodObject),
+			new Among4Use("ment", 15, 1, "", methodObject), new Among4Use("ement", 16, 1, "", methodObject) };
 
-	private final static Among			a_8[]				= { new Among("e", -1, 1, "", methodObject), new Among("l", -1, 2, "", methodObject) };
+	private final static Among4Use			a_8[]				= { new Among4Use("e", -1, 1, "", methodObject), new Among4Use("l", -1, 2, "", methodObject) };
 
-	private final static Among			a_9[]				= { new Among("succeed", -1, -1, "", methodObject), new Among("proceed", -1, -1, "", methodObject), new Among("exceed", -1, -1, "", methodObject), new Among("canning", -1, -1, "", methodObject),
-			new Among("inning", -1, -1, "", methodObject), new Among("earring", -1, -1, "", methodObject), new Among("herring", -1, -1, "", methodObject), new Among("outing", -1, -1, "", methodObject) };
+	private final static Among4Use			a_9[]				= { new Among4Use("succeed", -1, -1, "", methodObject), new Among4Use("proceed", -1, -1, "", methodObject), new Among4Use("exceed", -1, -1, "", methodObject), new Among4Use("canning", -1, -1, "", methodObject),
+			new Among4Use("inning", -1, -1, "", methodObject), new Among4Use("earring", -1, -1, "", methodObject), new Among4Use("herring", -1, -1, "", methodObject), new Among4Use("outing", -1, -1, "", methodObject) };
 
 	private static final char			g_v[]				= { 17, 65, 16, 1 };
 
@@ -65,7 +65,7 @@ import org.tartarus.snowball.custom.SnowballStemmerBase;
 	private int							I_p1;
 	private int							I_p2;
 
-	private void copy_from(EnglishStemmer other) {
+	private void copy_from(EnglishStemmer4Use other) {
 		B_Y_found = other.B_Y_found;
 		I_p2 = other.I_p2;
 		I_p1 = other.I_p1;
@@ -73,11 +73,11 @@ import org.tartarus.snowball.custom.SnowballStemmerBase;
 	}
 
 	public boolean equals(Object o) {
-		return o instanceof EnglishStemmer;
+		return o instanceof EnglishStemmer4Use;
 	}
 
 	public int hashCode() {
-		return EnglishStemmer.class.getName().hashCode();
+		return EnglishStemmer4Use.class.getName().hashCode();
 	}
 
 	private boolean r_exception1() {

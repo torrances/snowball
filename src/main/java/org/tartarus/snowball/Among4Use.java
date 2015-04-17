@@ -2,16 +2,16 @@ package org.tartarus.snowball;
 
 import java.lang.reflect.Method;
 
-public class Among {
+public class Among4Use {
 	public final Method				method;		/* method to use if substring matches */
 
-	public final SnowballProgram	methodobject;	/* object to invoke method on */
+	public final SnowballProgram4Use	methodobject;	/* object to invoke method on */
 	public final int				result;		/* result of the lookup */
 	public final char[]				s;				/* search string */
 	public final int				s_size;		/* search string */
 	public final int				substring_i;	/* index to longest matching substring */
 
-	public Among(String s, int substring_i, int result, String methodname, SnowballProgram methodobject) {
+	public Among4Use(String s, int substring_i, int result, String methodname, SnowballProgram4Use methodobject) {
 		this.s_size = s.length();
 		this.s = s.toCharArray();
 		this.substring_i = substring_i;

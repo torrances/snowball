@@ -2,7 +2,7 @@ package org.tartarus.snowball;
 
 import java.lang.reflect.InvocationTargetException;
 
-@SuppressWarnings("unused") public class SnowballProgram {
+@SuppressWarnings("unused") public class SnowballProgram4Use {
 	protected int			bra;
 
 	// current string
@@ -14,7 +14,7 @@ import java.lang.reflect.InvocationTargetException;
 
 	protected int			limit;
 	protected int			limit_backward;
-	protected SnowballProgram() {
+	protected SnowballProgram4Use() {
 		current = new StringBuffer();
 		setCurrent("");
 	}
@@ -27,7 +27,7 @@ import java.lang.reflect.InvocationTargetException;
 		return s;
 	}
 
-	protected void copy_from(SnowballProgram other) {
+	protected void copy_from(SnowballProgram4Use other) {
 		current = other.current;
 		cursor = other.cursor;
 		limit = other.limit;
@@ -64,7 +64,7 @@ import java.lang.reflect.InvocationTargetException;
 		return eq_s_b(s.length(), s.toString());
 	}
 
-	protected int find_among(Among v[], int v_size) {
+	protected int find_among(Among4Use v[], int v_size) {
 		int i = 0;
 		int j = v_size;
 
@@ -80,7 +80,7 @@ import java.lang.reflect.InvocationTargetException;
 			int k = i + ((j - i) >> 1);
 			int diff = 0;
 			int common = common_i < common_j ? common_i : common_j; // smaller
-			Among w = v[k];
+			Among4Use w = v[k];
 			int i2;
 			for (i2 = common; i2 < w.s_size; i2++) {
 				if (c + common == l) {
@@ -111,7 +111,7 @@ import java.lang.reflect.InvocationTargetException;
 			}
 		}
 		while (true) {
-			Among w = v[i];
+			Among4Use w = v[i];
 			if (common_i >= w.s_size) {
 				cursor = c + w.s_size;
 				if (w.method == null) return w.result;
@@ -135,7 +135,7 @@ import java.lang.reflect.InvocationTargetException;
 	}
 
 	// find_among_b is for backwards processing. Same comments apply
-	protected int find_among_b(Among v[], int v_size) {
+	protected int find_among_b(Among4Use v[], int v_size) {
 		int i = 0;
 		int j = v_size;
 
@@ -151,7 +151,7 @@ import java.lang.reflect.InvocationTargetException;
 			int k = i + ((j - i) >> 1);
 			int diff = 0;
 			int common = common_i < common_j ? common_i : common_j;
-			Among w = v[k];
+			Among4Use w = v[k];
 			int i2;
 			for (i2 = w.s_size - 1 - common; i2 >= 0; i2--) {
 				if (c - common == lb) {
@@ -177,7 +177,7 @@ import java.lang.reflect.InvocationTargetException;
 			}
 		}
 		while (true) {
-			Among w = v[i];
+			Among4Use w = v[i];
 			if (common_i >= w.s_size) {
 				cursor = c - w.s_size;
 				if (w.method == null) return w.result;

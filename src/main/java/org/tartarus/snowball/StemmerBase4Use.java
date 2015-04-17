@@ -1,14 +1,14 @@
-package org.tartarus.snowball.custom;
+package org.tartarus.snowball;
 
 import com.trimc.blogger.commons.exception.BusinessException;
 
-public class StemmerBase {
+public class StemmerBase4Use {
 
-	public static final String	CLASS_NAME	= "org.tartarus.snowball.EnglishStemmer4Use";
+	public static final String	CLASS_NAME	= "org.tartarus.snowball.ext.englishStemmer";
 
-	private SnowballStemmerBase	stemmer;
+	private SnowballStemmer4Use		stemmer;
 
-	protected SnowballStemmerBase getStemmer() throws BusinessException {
+	protected SnowballStemmer4Use getStemmer() throws BusinessException {
 		if (null == stemmer) instantiate();
 		return stemmer;
 	}
@@ -17,7 +17,7 @@ public class StemmerBase {
 		try {
 
 			Class<?> stemClass = Class.forName(CLASS_NAME);
-			setStemmer((SnowballStemmerBase) stemClass.newInstance());
+			setStemmer((SnowballStemmer4Use) stemClass.newInstance());
 
 		} catch (ClassNotFoundException e) {
 			throw new BusinessException(e, String.format("Class not found (class = %s)", CLASS_NAME));
@@ -28,7 +28,7 @@ public class StemmerBase {
 		}
 	}
 
-	protected void setStemmer(SnowballStemmerBase stemmer) {
+	protected void setStemmer(SnowballStemmer4Use stemmer) {
 		this.stemmer = stemmer;
 	}
 }
