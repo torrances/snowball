@@ -31,12 +31,14 @@
 	</properties>
 
 	<dependencies>
+	
 		<dependency>
 			<!-- github.com/torrances/java-commons -->
 			<groupId>com.trimc.blogger.commons</groupId>
 			<artifactId>java-commons</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+		
 	</dependencies>
 
 </project>
